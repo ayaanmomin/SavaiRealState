@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Savai Real Estate – Sumit Kamboj</title>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-inner">
+                <div class="nav-brand" onclick="showPage('home', null)">
+                    <img
+                        src="assets/logo.png"
+                        alt="Savai Real Estate"
+                        class="nav-logo"
+                    />
+                    <span class="nav-brand-text">Savai Real Estate</span>
+                </div>
+
+                <div class="nav-tabs" id="navTabs">
+                    <button
+                        class="nav-tab active"
+                        data-page="home"
+                        onclick="showPage('home', this)"
+                    >
+                        Home
+                    </button>
+                    <button
+                        class="nav-tab"
+                        data-page="properties"
+                        onclick="showPage('properties', this)"
+                    >
+                        Properties
+                    </button>
+                    <button
+                        class="nav-tab"
+                        data-page="list"
+                        onclick="showPage('list', this)"
+                    >
+                        List Property
+                    </button>
+                    <button
+                        class="nav-tab"
+                        data-page="contact"
+                        onclick="showPage('contact', this)"
+                    >
+                        Contact
+                    </button>
+                </div>
+
+                <button
+                    class="hamburger"
+                    onclick="openMobNav()"
+                    aria-label="Open menu"
+                >
+                    <i class="ti ti-menu-2"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="mob-nav" id="mobNav">
+            <button
+                class="mob-nav-close"
+                onclick="closeMobNav()"
+                aria-label="Close menu"
+            >
+                <i class="ti ti-x"></i>
+            </button>
+            <button
+                class="mob-tab active"
+                data-page="home"
+                onclick="showPage('home', null, true)"
+            >
+                Home
+            </button>
+            <button
+                class="mob-tab"
+                data-page="properties"
+                onclick="showPage('properties', null, true)"
+            >
+                Properties
+            </button>
+            <button
+                class="mob-tab"
+                data-page="list"
+                onclick="showPage('list', null, true)"
+            >
+                List Property
+            </button>
+            <button
+                class="mob-tab"
+                data-page="contact"
+                onclick="showPage('contact', null, true)"
+            >
+                Contact
+            </button>
+        </div>
+
+        <div class="page active" id="page-home">
+            <div class="hero">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-eyebrow">Meerut, Uttar Pradesh</div>
+                    <h1 class="hero-title">
+                        Your Property.<br /><em>Our Promise.</em>
+                    </h1>
+                    <p class="hero-sub">
+                        Trusted expertise for buyers, sellers, and every
+                        document that makes it official from property deals to
+                        construction, loans &amp; more.
+                    </p>
+                    <div class="hero-cta">
+                        <button
+                            class="btn-gold"
+                            onclick="showPage('properties', null)"
+                        >
+                            View Properties
+                        </button>
+                        <button
+                            class="btn-ghost"
+                            onclick="showPage('contact', null)"
+                        >
+                            Talk to Sumit
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stats-inner">
+                    <div class="stat-item">
+                        <span class="stat-n">500+</span>
+                        <span class="stat-l">Deals Closed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-n">10+</span>
+                        <span class="stat-l">Years Active</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-n">NCR</span>
+                        <span class="stat-l">Area Covered</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-n">100%</span>
+                        <span class="stat-l">Client Trust</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="sec-tag">What We Offer</div>
+                <h2 class="sec-title">
+                    Full-Service Real Estate<br />&amp; Documentation
+                </h2>
+                <p class="sec-desc">
+                    One stop for buying, selling, and all your government
+                    documentation needs.
+                </p>
+
+                <div class="services-grid">
+                    <div class="svc-card">
+                        <i class="ti ti-building-estate svc-icon"></i>
+                        <div class="svc-name">Property Buying</div>
+                        <div class="svc-desc">
+                            Residential &amp; commercial properties across
+                            Meerut and NCR. We find what you need.
+                        </div>
+                    </div>
+                    <div class="svc-card">
+                        <i class="ti ti-receipt-rupee svc-icon"></i>
+                        <div class="svc-name">Property Selling</div>
+                        <div class="svc-desc">
+                            Best market price, genuine buyers, and fast closures
+                            with full legal support.
+                        </div>
+                    </div>
+                    <div class="svc-card">
+                        <i class="ti ti-building-community svc-icon"></i>
+                        <div class="svc-name">
+                            Development &amp; Construction
+                        </div>
+                        <div class="svc-desc">
+                            End-to-end support for residential and commercial
+                            construction projects across the region.
+                        </div>
+                    </div>
+                    <div class="svc-card">
+                        <i class="ti ti-cash svc-icon"></i>
+                        <div class="svc-name">Loans &amp; EMI Service</div>
+                        <div class="svc-desc">
+                            Home loans, property financing and flexible EMI
+                            plans tailored to your budget.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" style="padding-top: 0">
+                <div class="sec-tag">About</div>
+                <div class="about-grid">
+                    <div class="about-photo-wrap">
+                        <img
+                            src="assets/sumit.jpeg"
+                            alt="Sumit Kamboj"
+                            class="about-photo"
+                        />
+                        <div class="about-frame"></div>
+                    </div>
+
+                    <div>
+                        <div class="sec-tag">The Expert</div>
+                        <div class="about-name">Sumit Kamboj</div>
+                        <span class="about-role"
+                            >Buyer &amp; Seller Specialist</span
+                        >
+                        <div class="about-divider"></div>
+                        <p class="about-text">
+                            With deep roots in the Meerut real estate market,
+                            Sumit Kamboj brings transparency, trust, and
+                            efficiency to every transaction. Whether you're
+                            buying your first home, selling a commercial space,
+                            or navigating government paperwork he ensures every
+                            detail is handled with care and professionalism.
+                        </p>
+                        <p class="about-text">
+                            His dual expertise in property deals and official
+                            government services makes Savai Real Estate truly
+                            unique your one stop for everything real estate.
+                        </p>
+                        <div class="about-badges">
+                            <span class="badge">Property Deals</span>
+                            <span class="badge">Govt. Services</span>
+                            <span class="badge">NCR Expert</span>
+                            <span class="badge">Trusted Since 2015</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-contact-bg">
+                <div class="section">
+                    <div class="sec-tag">Contact</div>
+                    <h2 class="sec-title">Let's Talk</h2>
+                    <p class="sec-desc">
+                        Reach us directly or drop a message we'll get back to
+                        you fast.
+                    </p>
+
+                    <div class="contact-grid">
+                        <div>
+                            <div class="channels-label">Reach Us On</div>
+                            <div class="channels-list">
+                                <a
+                                    class="ch-card"
+                                    href="https://wa.me/919536751355"
+                                    target="_blank"
+                                >
+                                    <i
+                                        class="ti ti-brand-whatsapp ch-icon wa"
+                                    ></i>
+                                    <div>
+                                        <span class="ch-label">WhatsApp</span>
+                                        <span class="ch-val"
+                                            >+91 95367 51355</span
+                                        >
+                                    </div>
+                                </a>
+
+                                <a
+                                    class="ch-card"
+                                    href="https://www.instagram.com/sumitkumar6046?igsh=aGNzdjA4a3g0dG15"
+                                    target="_blank"
+                                >
+                                    <i
+                                        class="ti ti-brand-instagram ch-icon ig"
+                                    ></i>
+                                    <div>
+                                        <span class="ch-label">Instagram</span>
+                                        <span class="ch-val"
+                                            >@sumitkumar6046</span
+                                        >
+                                    </div>
+                                </a>
+
+                                <a
+                                    class="ch-card"
+                                    href="https://www.facebook.com/share/18ziYTb5zC/"
+                                    target="_blank"
+                                >
+                                    <i
+                                        class="ti ti-brand-facebook ch-icon fb"
+                                    ></i>
+                                    <div>
+                                        <span class="ch-label">Facebook</span>
+                                        <span class="ch-val">Sumit Kumar</span>
+                                    </div>
+                                </a>
+
+                                <a
+                                    class="ch-card"
+                                    href="mailto:Summit8519@gmail.com"
+                                >
+                                    <i class="ti ti-mail ch-icon em"></i>
+                                    <div>
+                                        <span class="ch-label">Email</span>
+                                        <span class="ch-val"
+                                            >Summit8519@gmail.com</span
+                                        >
+                                    </div>
+                                </a>
+
+                                <a class="ch-card" href="tel:+919536751355">
+                                    <i class="ti ti-phone ch-icon ph"></i>
+                                    <div>
+                                        <span class="ch-label">Phone Call</span>
+                                        <span class="ch-val"
+                                            >+91 95367 51355</span
+                                        >
+                                    </div>
+                                </a>
+                                <a class="ch-card" href="tel:+919536195155">
+                                    <i class="ti ti-phone ch-icon ph"></i>
+                                    <div>
+                                        <span class="ch-label">Phone Call</span>
+                                        <span class="ch-val"
+                                            >+91 95361 95155</span
+                                        >
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="form-wrap">
+                            <h3>Quick Enquiry</h3>
+
+                            <form
+                                id="homeContactForm"
+                                action="https://api.web3forms.com/submit"
+                                method="POST"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="access_key"
+                                    value="583952df-4cee-49cb-8a0a-c69299b8730d"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="subject"
+                                    value="New Enquiry Savai Real Estate (Homepage)"
+                                />
+                                <input
+                                    type="hidden"
+                                    name="from_name"
+                                    value="Savai Real Estate Website"
+                                />
+                                <input
+                                    type="checkbox"
+                                    name="botcheck"
+                                    style="display: none"
+                                />
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            placeholder="Your name"
+                                            required
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Phone</label>
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            placeholder="Your phone number"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>I'm interested in</label>
+                                    <select name="interest">
+                                        <option>Buying a Property</option>
+                                        <option>Selling a Property</option>
+                                        <option>
+                                            Development &amp; Construction
+                                        </option>
+                                        <option>Loans &amp; EMI Service</option>
+                                        <option>General Enquiry</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Message</label>
+                                    <textarea
+                                        name="message"
+                                        placeholder="Tell us what you need..."
+                                    ></textarea>
+                                </div>
+                                <button type="submit" class="form-submit">
+                                    Send Message
+                                </button>
+                                <div class="form-msg" id="homeContactMsg"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page-properties">
+            <div class="section">
+                <div class="sec-tag">Listings</div>
+                <h2 class="sec-title">Browse Properties</h2>
+                <p class="sec-desc">
+                    Explore current listings across Meerut and NCR. Click "Make
+                    a Deal" to express your interest.
+                </p>
+
+                <div class="prop-filters">
+                    <button
+                        class="filter-btn active"
+                        onclick="filterProps('all', this)"
+                    >
+                        All
+                    </button>
+                    <button
+                        class="filter-btn"
+                        onclick="filterProps('residential', this)"
+                    >
+                        Residential
+                    </button>
+                    <button
+                        class="filter-btn"
+                        onclick="filterProps('commercial', this)"
+                    >
+                        Commercial
+                    </button>
+                    <button
+                        class="filter-btn"
+                        onclick="filterProps('plot', this)"
+                    >
+                        Plots
+                    </button>
+                </div>
+
+                <div class="props-grid" id="propsGrid"></div>
+
+                <div class="map-section">
+                    <div class="sec-tag">Location</div>
+                    <h2 class="sec-title">Find Us on the Map</h2>
+                    <p class="sec-desc">
+                        We operate across Meerut and surrounding areas of NCR.
+                    </p>
+
+                    <div class="map-wrap" onclick="openMap()">
+                        <div class="map-visual">
+                            <div class="map-overlay-bg"></div>
+                            <div class="map-content">
+                                <div class="map-icon">
+                                    <i class="ti ti-map-2"></i>
+                                </div>
+                                <div class="map-city">
+                                    Meerut, Uttar Pradesh
+                                </div>
+                                <div class="map-hint">
+                                    Tap to open in Google Maps
+                                </div>
+                                <div class="map-open-btn">
+                                    <i class="ti ti-external-link"></i>
+                                    Open Maps
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-note">
+                            <i class="ti ti-info-circle"></i>
+                            Tap to open our exact office location in Google
+                            Maps.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page-list">
+            <div class="section">
+                <div class="sec-tag">Sell With Us</div>
+                <h2 class="sec-title">List Your Property</h2>
+                <p class="sec-desc">
+                    Fill in your property details below. Sumit will reach out to
+                    you directly no backend, no hassle.
+                </p>
+
+                <div class="list-grid">
+                    <div class="form-wrap">
+                        <form
+                            id="listForm"
+                            action="https://api.web3forms.com/submit"
+                            method="POST"
+                        >
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="583952df-4cee-49cb-8a0a-c69299b8730d"
+                            />
+                            <input
+                                type="hidden"
+                                name="subject"
+                                value="New Property Listing Savai Real Estate"
+                            />
+                            <input
+                                type="hidden"
+                                name="from_name"
+                                value="Savai Real Estate Website"
+                            />
+                            <input
+                                type="checkbox"
+                                name="botcheck"
+                                style="display: none"
+                            />
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Your Name</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Full name"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Your phone number"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Property Type</label>
+                                <select name="property_type" required>
+                                    <option value="">Select type</option>
+                                    <option>
+                                        Residential Flat / Apartment
+                                    </option>
+                                    <option>
+                                        Residential Independent House
+                                    </option>
+                                    <option>Commercial Office / Shop</option>
+                                    <option>Plot / Land</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Location / Area</label>
+                                    <input
+                                        type="text"
+                                        name="location"
+                                        placeholder="e.g. Indirapuram"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label>Expected Price (₹)</label>
+                                    <input
+                                        type="text"
+                                        name="price"
+                                        placeholder="e.g. 45 Lakh"
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Property Details</label>
+                                <textarea
+                                    name="details"
+                                    placeholder="Size, BHK, age of property, special features..."
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">
+                                Submit Listing
+                            </button>
+                            <div class="form-msg" id="listMsg"></div>
+                        </form>
+                    </div>
+
+                    <div class="list-perks">
+                        <div class="perks-header">Why List With Us</div>
+
+                        <div class="perk">
+                            <div class="perk-icon">
+                                <i class="ti ti-users"></i>
+                            </div>
+                            <div>
+                                <div class="perk-title">Genuine Buyers</div>
+                                <div class="perk-desc">
+                                    We connect you only with verified, serious
+                                    buyers who are ready to transact.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perk">
+                            <div class="perk-icon">
+                                <i class="ti ti-chart-line"></i>
+                            </div>
+                            <div>
+                                <div class="perk-title">Best Market Price</div>
+                                <div class="perk-desc">
+                                    Our deep local knowledge ensures you get the
+                                    best possible value for your property.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perk">
+                            <div class="perk-icon">
+                                <i class="ti ti-file-certificate"></i>
+                            </div>
+                            <div>
+                                <div class="perk-title">Full Documentation</div>
+                                <div class="perk-desc">
+                                    We handle all paperwork and legal
+                                    documentation so you can close with
+                                    confidence.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perk">
+                            <div class="perk-icon">
+                                <i class="ti ti-clock"></i>
+                            </div>
+                            <div>
+                                <div class="perk-title">Fast Closures</div>
+                                <div class="perk-desc">
+                                    From listing to deal our experience means
+                                    your property sells faster.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="perk">
+                            <div class="perk-icon">
+                                <i class="ti ti-writing-sign"></i>
+                            </div>
+                            <div>
+                                <div class="perk-title">
+                                    Agreement &amp; Acquisition
+                                </div>
+                                <div class="perk-desc">
+                                    Execute sale agreement and complete the
+                                    acquisition process with all regulatory
+                                    formalities.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page" id="page-contact">
+            <div class="section">
+                <div class="sec-tag">Reach Out</div>
+                <h2 class="sec-title">Get In Touch</h2>
+                <p class="sec-desc">
+                    Reach us on WhatsApp, email or phone or fill the form and
+                    we'll contact you.
+                </p>
+
+                <div class="contact-layout">
+                    <div>
+                        <div class="channels-label">Direct Contact</div>
+                        <div class="channels-list">
+                            <a
+                                class="ch-card"
+                                href="https://wa.me/919536751355"
+                                target="_blank"
+                            >
+                                <i class="ti ti-brand-whatsapp ch-icon wa"></i>
+                                <div>
+                                    <span class="ch-label">WhatsApp</span>
+                                    <span class="ch-val">+91 95367 51355</span>
+                                </div>
+                            </a>
+                            <a
+                                class="ch-card"
+                                href="mailto:Summit8519@gmail.com"
+                            >
+                                <i class="ti ti-mail ch-icon em"></i>
+                                <div>
+                                    <span class="ch-label">Email</span>
+                                    <span class="ch-val"
+                                        >Summit8519@gmail.com</span
+                                    >
+                                </div>
+                            </a>
+                            <a class="ch-card" href="tel:+919536751355">
+                                <i class="ti ti-phone ch-icon ph"></i>
+                                <div>
+                                    <span class="ch-label">Phone Call</span>
+                                    <span class="ch-val">+91 95367 51355</span>
+                                </div>
+                            </a>
+                            <a class="ch-card" href="tel:+919536195155">
+                                <i class="ti ti-phone ch-icon ph"></i>
+                                <div>
+                                    <span class="ch-label">Phone Call</span>
+                                    <span class="ch-val">+91 95361 95155</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="office-card">
+                            <div class="office-label">Office Location</div>
+                            <div class="office-addr">
+                                <i class="ti ti-map-pin"></i>
+                                <span>
+                                    Meerut, Modipuram, Uttar Pradesh<br />
+                                    Near Namo Bhrat Railway station
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-wrap">
+                        <h3>Send a Message</h3>
+
+                        <form
+                            id="contactForm"
+                            action="https://api.web3forms.com/submit"
+                            method="POST"
+                        >
+                            <input
+                                type="hidden"
+                                name="access_key"
+                                value="583952df-4cee-49cb-8a0a-c69299b8730d"
+                            />
+                            <input
+                                type="hidden"
+                                name="subject"
+                                value="New Enquiry Savai Real Estate"
+                            />
+                            <input
+                                type="hidden"
+                                name="from_name"
+                                value="Savai Real Estate Website"
+                            />
+                            <input
+                                type="checkbox"
+                                name="botcheck"
+                                style="display: none"
+                            />
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Your name"
+                                        required
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Your phone number"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="you@email.com"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label>I'm interested in</label>
+                                <select name="interest">
+                                    <option>Buying a Property</option>
+                                    <option>Selling a Property</option>
+                                    <option>
+                                        Development &amp; Construction
+                                    </option>
+                                    <option>Loans &amp; EMI Service</option>
+                                    <option>General Enquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea
+                                    name="message"
+                                    placeholder="Tell us what you're looking for..."
+                                ></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">
+                                Send Message
+                            </button>
+                            <div class="form-msg" id="contactMsg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <img
+                        src="assets/logo.png"
+                        alt="Savai Real Estate"
+                        class="footer-logo"
+                    />
+                    <span class="footer-brand-text">Savai Real Estate</span>
+                </div>
+                <div class="footer-copy">
+                    © 2025 Sumit Kamboj · Modipuram, U.P.
+                </div>
+            </div>
+        </footer>
+
+        <div class="modal-bg" id="dealModal">
+            <div class="modal">
+                <button
+                    class="modal-close"
+                    onclick="closeModal()"
+                    aria-label="Close"
+                >
+                    <i class="ti ti-x"></i>
+                </button>
+                <div class="modal-title">Make a Deal</div>
+                <span class="modal-prop" id="modalPropName"></span>
+
+                <form
+                    id="dealForm"
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                >
+                    <input
+                        type="hidden"
+                        name="access_key"
+                        value="583952df-4cee-49cb-8a0a-c69299b8730d"
+                    />
+                    <input type="hidden" name="subject" id="dealSubject" />
+                    <input
+                        type="hidden"
+                        name="from_name"
+                        value="Savai Real Estate Website"
+                    />
+                    <input type="hidden" name="property" id="dealProperty" />
+                    <input
+                        type="checkbox"
+                        name="botcheck"
+                        style="display: none"
+                    />
+
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Full name"
+                            required
+                        />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Phone</label>
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="+91 XXXXX"
+                                required
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label>Budget (₹)</label>
+                            <input
+                                type="text"
+                                name="budget"
+                                placeholder="e.g. 50 Lakh"
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea
+                            name="message"
+                            placeholder="Any questions or preferred visit time?"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">
+                        Send Enquiry →
+                    </button>
+                    <div class="form-msg" id="dealMsg"></div>
+                </form>
+            </div>
+        </div>
+
+        <a
+            class="wa-float"
+            href="https://wa.me/919536751355"
+            target="_blank"
+            aria-label="Chat on WhatsApp"
+        >
+            <i class="ti ti-brand-whatsapp"></i>
+        </a>
+
+        <script src="script.js"></script>
+    </body>
+</html>
